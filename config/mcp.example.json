@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "uefi-mcp-fis": {
+      "command": "CAMINHO_ABSOLUTO/uefi-uefimcp-fis/.venv/Scripts/python.exe",
+      "args": [
+        "CAMINHO_ABSOLUTO/uefi-uefimcp-fis/run.py"
+      ]
+    }
+  }
+}

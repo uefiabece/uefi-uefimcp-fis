@@ -1,28 +1,71 @@
 {
-  "_comment": "Edit this file when specializing the template for a specific subject.",
-
-  "server_name": "uefi-mcp-template",
-  "subject_name": "Template Subject",
-  "course_name": "Template Course",
+  "_comment": "Física — curso de segundo ciclo da UFABC em duas modalidades: Bacharelado (ingresso a partir do BCT) e Licenciatura (ingresso a partir da LCNE). Nível: curso (não disciplina).",
+  "server_name": "uefi-mcp-fis",
+  "subject_name": "Física (Bacharelado e Licenciatura)",
+  "course_name": "Física",
+  "course_code": null,
   "institution": "UFABC",
   "language": "pt-BR",
-
   "features": {
     "image_interpretation": false,
-    "symbolic_math": false,
+    "symbolic_math": true,
     "circuit_editing": false,
-    "code_execution": false
+    "code_execution": false,
+    "curriculum_navigation": true,
+    "pdf_reading": true
   },
-
-  "difficulty_levels": ["easy", "medium", "hard"],
-  "exercise_styles": ["multiple_choice", "open_answer", "proof", "practical"],
-
-  "content_sections": ["syllabus", "bibliography", "exams", "exercises", "notes", "media"],
-
+  "difficulty_levels": [
+    "easy",
+    "medium",
+    "hard"
+  ],
+  "exercise_styles": [
+    "multiple_choice",
+    "open_answer",
+    "proof",
+    "practical"
+  ],
+  "content_sections": [
+    "syllabus",
+    "bibliography",
+    "exams",
+    "exercises",
+    "notes",
+    "media"
+  ],
+  "modalidades": {
+    "bacharelado": {
+      "name": "Bacharelado em Física",
+      "degree_type": "bacharelado_segundo_ciclo",
+      "prerequisite_course": "BCT",
+      "course_code": null,
+      "ppc_version": null,
+      "ppc_versions_available": [],
+      "total_credits_approx": null
+    },
+    "licenciatura": {
+      "name": "Licenciatura em Física",
+      "degree_type": "licenciatura_segundo_ciclo",
+      "prerequisite_course": "LCNE",
+      "course_code": null,
+      "ppc_version": null,
+      "ppc_versions_available": [],
+      "total_credits_approx": null
+    }
+  },
   "metadata": {
-    "credits": null,
+    "ppc_version": null,
+    "ppc_versions_available": [],
+    "calendar_system": "quadrimestral",
+    "duration_years": null,
+    "year": 2026,
     "semester": null,
-    "professor": null,
-    "year": null
+    "professor": null
+  },
+  "level": "course",
+  "origin": {
+    "repository": "https://github.com/uefiabece/uefi-uefimcp",
+    "commit": "8fa9ccb24be21ee3d173f82a07c29b43403efc56",
+    "method": "git clone do template + camada de curso do uefi-uefimcp-bct (PDF, curriculum.py, aqui com parâmetro de modalidade) + verificação stdio do uefi-uefimcp-neuro; estrutura de modalidades do uefi-uefimcp-bio; materiais acadêmicos não importados"
   }
 }
